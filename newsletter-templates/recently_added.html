@@ -29,7 +29,6 @@
     <title>scootRflix - ${subject}</title>
     <link rel="shortcut icon" href="${base_url_image + 'images/favicon/favicon.ico' if base_url_image else 'https://tautulli.com/images/favicon.ico'}">
     <style>
-<style>
     /* -------------------------------------
         GLOBAL RESETS
     ------------------------------------- */
@@ -48,6 +47,7 @@
         padding: 0;
         -ms-text-size-adjust: 100%;
         -webkit-text-size-adjust: 100%;
+        background-color: #0f0f0f;
     }
 
     table {
@@ -99,16 +99,15 @@
         font-size: 12px;
     }
     .main {
-        /* UPDATED: Changed background to a deeper black for a more cinematic feel */
         background: #181818;
-        border-radius: 3px;
+        border-radius: 8px;
         width: 100%;
         color: #ffffff;
     }
 
     .wrapper {
         box-sizing: border-box;
-        padding: 5px;
+        padding: 15px;
         overflow: auto;
     }
 
@@ -127,12 +126,11 @@
     .footer-bar {
         margin-left: auto;
         margin-right: auto;
-        width: 200px;
-        /* UPDATED: Replaced solid gold line with a vibrant rainbow gradient from the logo */
-        border-top: 2px solid #00BCD4; /* Fallback for email clients that don't support gradients */
-        height: 2px;
-        background-image: linear-gradient(to right, #e53935, #ff8f00, #fdd835, #4caf50, #00bcd4, #1e88e5);
-        margin-top: 25px;
+        width: 80%;
+        height: 1px;
+        background-color: #e8dcc8;
+        border: none;
+        margin-top: 30px;
     }
 
     .footer td,
@@ -224,22 +222,27 @@
     ------------------------------------- */
     .header {
         width: 100%;
-        height: 90px;
         text-align: center;
     }
     .header-img {
-        width: 492px;
-        height: 90px;
-        margin-left: -35px;
+        width: 100%;
+        height: auto;
+        display: block;
     }
     .server-name {
-        font-size: 30px;
+        font-size: 28px;
         text-align: center;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 18px 0 4px 0;
     }
     .dates {
         color: #aaaaaa;
-        font-size: 20px;
+        font-size: 16px;
         text-align: center;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
     }
     .body-message {
         font-size: 20px;
@@ -275,37 +278,39 @@
     .sub-header-bar {
         margin-left: auto;
         margin-right: auto;
-        font-size: 30px;
-        text-align: center;
-        width: 200px;
-        /* UPDATED: Replaced solid gold line with a vibrant rainbow gradient from the logo */
-        border-top: 2px solid #00BCD4; /* Fallback for email clients that don't support gradients */
-        height: 2px;
-        background-image: linear-gradient(to right, #e53935, #ff8f00, #fdd835, #4caf50, #00bcd4, #1e88e5);
-        margin-top: 15px;
-        margin-bottom: 25px;
+        width: 80%;
+        height: 1px;
+        background-color: #e8dcc8;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 30px;
     }
     .sub-header-title {
         margin-left: auto;
         margin-right: auto;
-        font-size: 30px;
+        font-size: 22px;
         text-align: center;
-        font-weight: lighter;
+        font-weight: 300;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: #dddddd;
     }
     .sub-header-count {
         margin-left: auto;
         margin-right: auto;
-        font-size: 30px;
+        font-size: 28px;
         text-align: center;
+        padding-top: 6px;
     }
     .sub-header-count .count {
-        /* UPDATED: Changed count color from gold to the new vibrant teal accent */
         color: #00BCD4;
+        font-weight: 600;
     }
     .sub-header-count .count-units {
-        color: #aaaaaa;
-        font-size: 20px;
+        color: #888888;
+        font-size: 16px;
         text-transform: uppercase;
+        letter-spacing: 2px;
     }
 
     /* -------------------------------------
@@ -322,7 +327,7 @@
                
     </style>
 </head>
-<body style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;font-size: 14px;line-height: 1.4;margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;">
+<body style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;font-size: 14px;line-height: 1.4;margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #0f0f0f;">
 % if preview and service and service != 'self-hosted':
 <div class="local-preview-note" style="text-align: center;padding-top: 10px;"><p style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-weight: 400;margin: 0;color: #282A2D;font-size: 12px;">Note: Local preview images only - images will be uploaded to ${service.capitalize()} when the newsletter is sent.</p></div>  <!-- IGNORE SAVE -->
 % elif preview and not service:
@@ -338,33 +343,33 @@
                     <a href="${base_url + uuid}" title="View full newsletter" target="_blank" rel="noreferrer" style="text-decoration: underline;color: #282A2D;">Click here to view the full newsletter.</a>  <!-- IGNORE SAVE -->
                 </div>  <!-- IGNORE SAVE -->
                 % endif
-                <table border="0" cellpadding="3" cellspacing="0" class="main" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background: #282A2D;border-radius: 3px;color: #ffffff;">
+                <table border="0" cellpadding="3" cellspacing="0" class="main" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background: #181818;border-radius: 8px;color: #ffffff;">
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="header" style="width: 100%;height: 90px;text-align: center;">
-                                <img src="${base_url_image + 'images/newsletter/newsletter-header.png' if base_url_image else 'https://flix.scootr.ca/images/newsletter-header.png'}" class="header-img" width="492" height="90" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;width: 492px;height: 90px;margin-left: -35px;">
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="header" style="width: 100%;text-align: center;">
+                                <img src="${base_url_image + 'images/newsletter/newsletter-header.png' if base_url_image else 'https://flix.scootr.ca/images/newsletter-header.png'}" class="header-img" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;width: 100%;height: auto;display: block;">
                             </div>
-                            <div class="server-name" style="font-size: 30px;text-align: center;">${parameters['server_name']}</div>
-                            <div class="dates" style="color: #aaaaaa;font-size: 20px;text-align: center;">${parameters['start_date']} - ${parameters['end_date']}</div>
+                            <div class="server-name" style="font-size: 28px;text-align: center;font-weight: 300;letter-spacing: 4px;text-transform: uppercase;padding: 18px 0 4px 0;">${parameters['server_name']}</div>
+                            <div class="dates" style="color: #aaaaaa;font-size: 16px;text-align: center;letter-spacing: 2px;padding-bottom: 10px;">${parameters['start_date']} - ${parameters['end_date']}</div>
                         </td>
                     </tr>
                     % if message:
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;width: 200px;border-top: 1px solid #E5A00D;margin-top: 15px;margin-bottom: 25px;"></div>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 20px;margin-bottom: 30px;"></div>
                             <div class="body-message" style="font-size: 20px;text-align: center;width: 80%;margin-left: auto;margin-right: auto;">${'<br>'.join(l for l in message.splitlines()) | n}</div>
                         </td>
                     </tr>
                     % endif
                     % if recently_added.get('movie'):
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;width: 200px;border-top: 1px solid #E5A00D;margin-top: 15px;margin-bottom: 25px;"></div>
-                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;font-weight: lighter;">
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 20px;margin-bottom: 30px;"></div>
+                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 22px;text-align: center;font-weight: 300;letter-spacing: 3px;text-transform: uppercase;color: #dddddd;">
                                 <img src="${(base_url_image + 'images/libraries/movie.png') if base_url_image else 'https://tautulli.com/images/libraries/movie.png'}" class="sub-header-icon" width="30" height="30" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;height: 30px;width: 30px;vertical-align: middle;margin-right: 5px;margin-bottom: 5px;"> Recently Added Movies
                             </div>
-                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;">
-                                <span class="count" style="color: #E5A00D;">${len(recently_added['movie'])}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">movie${'s' if len(recently_added['movie']) > 1 else ''}</span>
+                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 28px;text-align: center;padding-top: 6px;">
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${len(recently_added['movie'])}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">movie${'s' if len(recently_added['movie']) > 1 else ''}</span>
                             </div>
                         </td>
                     </tr>
@@ -382,10 +387,10 @@
                                                 <td align="center" valign="top" class="card-instance pad" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 0 !important;width: 251px !important;min-width: 251px !important;max-width: 251px !important;"></td>
                                                 % endif
                                                 <td align="center" valign="top" class="card-instance movie" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 3px;width: 502px;min-width: 502px;max-width: 502px;height: 233px;">
-                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + movie['art_hash']) if base_url_image else movie['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #282828;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + movie['art_hash']) if base_url_image else movie['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #1a1a1a;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                         <tr>
                                                             <td class="card-poster-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;width: 152px;min-width: 152px;height: 227px;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + movie['thumb_hash']) if base_url_image else movie['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #3F4245;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + movie['thumb_hash']) if base_url_image else movie['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #252525;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                                     <tr>
                                                                         <td style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${movie['rating_key']}" title="${movie['title']}" target="_blank" rel="noreferrer" style="text-decoration: underline;">
@@ -398,7 +403,7 @@
                                                             <td class="card-info-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;padding-left: 4px;text-align: left;height: 227px;">
                                                                 <table border="0" cellpadding="0" cellspacing="0" class="card-info-container-table" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;height: 100%;">
                                                                     <tr>
-                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .1);line-height: 1.2rem;padding: 5px;max-width: 320px;">
+                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .2);line-height: 1.2rem;padding: 5px;max-width: 320px;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${movie['rating_key']}" title="${movie['title']}" target="_blank" rel="noreferrer" style="text-decoration: none;color: #ffffff;">${movie['title']}</a>
                                                                         </td>
                                                                     </tr>
@@ -476,15 +481,15 @@
                     % endif
                     % if recently_added.get('show'):
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;width: 200px;border-top: 1px solid #E5A00D;margin-top: 15px;margin-bottom: 25px;"></div>
-                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;font-weight: lighter;">
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 20px;margin-bottom: 30px;"></div>
+                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 22px;text-align: center;font-weight: 300;letter-spacing: 3px;text-transform: uppercase;color: #dddddd;">
                                 <img src="${(base_url_image + 'images/libraries/show.png') if base_url_image else 'https://tautulli.com/images/libraries/show.png'}" class="sub-header-icon" width="30" height="30" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;height: 30px;width: 30px;vertical-align: middle;margin-right: 5px;margin-bottom: 5px;"> Recently Added TV Shows
                             </div>
-                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;">
-                                <span class="count" style="color: #E5A00D;">${len(recently_added['show'])}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">show${'s' if len(recently_added['show']) > 1 else ''}</span>&nbsp;/&nbsp;
+                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 28px;text-align: center;padding-top: 6px;">
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${len(recently_added['show'])}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">show${'s' if len(recently_added['show']) > 1 else ''}</span>&nbsp;/&nbsp;
                                 <% total_episodes = sum(season['episode_count'] for show in recently_added['show'] for season in show['season']) %>
-                                <span class="count" style="color: #E5A00D;">${total_episodes}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">episode${'s' if total_episodes > 1 else ''}</span>
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${total_episodes}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">episode${'s' if total_episodes > 1 else ''}</span>
                             </div>
                         </td>
                     </tr>
@@ -511,10 +516,10 @@
                                                         link_rating_key = show['rating_key']
                                                 %>
                                                 <td align="center" valign="top" class="card-instance show" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 3px;width: 502px;min-width: 502px;max-width: 502px;height: 233px;">
-                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + show['art_hash']) if base_url_image else show['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #282828;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + show['art_hash']) if base_url_image else show['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #1a1a1a;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                         <tr>
                                                             <td class="card-poster-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;width: 152px;min-width: 152px;height: 227px;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + show['thumb_hash']) if base_url_image else show['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #3F4245;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + show['thumb_hash']) if base_url_image else show['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #252525;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                                     <tr>
                                                                         <td style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${link_rating_key}" title="${show['title']}" target="_blank" rel="noreferrer" style="text-decoration: underline;">
@@ -527,7 +532,7 @@
                                                             <td class="card-info-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;padding-left: 4px;text-align: left;height: 227px;">
                                                                 <table border="0" cellpadding="0" cellspacing="0" class="card-info-container-table" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;height: 100%;">
                                                                     <tr>
-                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .1);line-height: 1.2rem;padding: 5px;max-width: 320px;">
+                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .2);line-height: 1.2rem;padding: 5px;max-width: 320px;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${link_rating_key}" title="${show['title']}" target="_blank" rel="noreferrer" style="text-decoration: none;color: #ffffff;">${show['title']}</a>
                                                                         </td>
                                                                     </tr>
@@ -629,15 +634,15 @@
                     % endif
                     % if recently_added.get('artist'):
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;width: 200px;border-top: 1px solid #E5A00D;margin-top: 15px;margin-bottom: 25px;"></div>
-                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;font-weight: lighter;">
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 20px;margin-bottom: 30px;"></div>
+                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 22px;text-align: center;font-weight: 300;letter-spacing: 3px;text-transform: uppercase;color: #dddddd;">
                                 <img src="${(base_url_image + 'images/libraries/artist.png') if base_url_image else 'https://tautulli.com/images/libraries/artist.png'}" class="sub-header-icon" width="30" height="30" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;height: 30px;width: 30px;vertical-align: middle;margin-right: 5px;margin-bottom: 5px;"> Recently Added Music
                             </div>
-                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;">
-                                <span class="count" style="color: #E5A00D;">${len(recently_added['artist'])}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">artist${'s' if len(recently_added['artist']) > 1 else ''}</span> /
+                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 28px;text-align: center;padding-top: 6px;">
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${len(recently_added['artist'])}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">artist${'s' if len(recently_added['artist']) > 1 else ''}</span> /
                                 <% total_albums = sum(artist['album_count'] for artist in recently_added['artist']) %>
-                                <span class="count" style="color: #E5A00D;">${total_albums}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">album${'s' if total_albums > 1 else ''}</span>
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${total_albums}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">album${'s' if total_albums > 1 else ''}</span>
                             </div>
                         </td>
                     </tr>
@@ -655,10 +660,10 @@
                                                 <td align="center" valign="top" class="card-instance pad" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 0 !important;width: 251px !important;min-width: 251px !important;max-width: 251px !important;"></td>
                                                 % endif
                                                 <td align="center" valign="top" class="card-instance album" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 3px;width: 502px;min-width: 502px;max-width: 502px;height: 158px;">
-                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + album['art_hash']) if base_url_image else album['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #282828;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + album['art_hash']) if base_url_image else album['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #1a1a1a;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                         <tr>
                                                             <td class="card-poster-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;width: 152px;min-width: 152px;height: 152px;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + album['thumb_hash']) if base_url_image else album['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #3F4245;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + album['thumb_hash']) if base_url_image else album['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #252525;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                                     <tr>
                                                                         <td style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${album['rating_key']}" title="${album['title']}" target="_blank" rel="noreferrer" style="text-decoration: underline;">
@@ -671,7 +676,7 @@
                                                             <td class="card-info-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;padding-left: 4px;text-align: left;height: 152px;">
                                                                 <table border="0" cellpadding="0" cellspacing="0" class="card-info-container-table" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;height: 100%;">
                                                                     <tr>
-                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .1);line-height: 1.2rem;padding: 5px;max-width: 320px;">
+                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .2);line-height: 1.2rem;padding: 5px;max-width: 320px;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${album['rating_key']}" title="${album['title']}" target="_blank" rel="noreferrer" style="text-decoration: none;color: #ffffff;">${album['title']}</a>
                                                                         </td>
                                                                     </tr>
@@ -745,13 +750,13 @@
                     % endif
                     % if recently_added.get('other_video'):
                     <tr>
-                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 5px;overflow: auto;">
-                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;width: 200px;border-top: 1px solid #E5A00D;margin-top: 15px;margin-bottom: 25px;"></div>
-                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;font-weight: lighter;">
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="sub-header-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 20px;margin-bottom: 30px;"></div>
+                            <div class="sub-header-title" style="margin-left: auto;margin-right: auto;font-size: 22px;text-align: center;font-weight: 300;letter-spacing: 3px;text-transform: uppercase;color: #dddddd;">
                                 <img src="${(base_url_image + 'images/libraries/video.png') if base_url_image else 'https://tautulli.com/images/libraries/video.png'}" class="sub-header-icon" width="30" height="30" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;height: 30px;width: 30px;vertical-align: middle;margin-right: 5px;margin-bottom: 5px;"> Recently Added Videos
                             </div>
-                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 30px;text-align: center;">
-                                <span class="count" style="color: #E5A00D;">${len(recently_added['other_video'])}</span> <span class="count-units" style="color: #aaaaaa;font-size: 20px;text-transform: uppercase;">video${'s' if len(recently_added['other_video']) > 1 else ''}</span>
+                            <div class="sub-header-count" style="margin-left: auto;margin-right: auto;font-size: 28px;text-align: center;padding-top: 6px;">
+                                <span class="count" style="color: #00BCD4;font-weight: 600;">${len(recently_added['other_video'])}</span> <span class="count-units" style="color: #888888;font-size: 16px;text-transform: uppercase;letter-spacing: 2px;">video${'s' if len(recently_added['other_video']) > 1 else ''}</span>
                             </div>
                         </td>
                     </tr>
@@ -769,10 +774,10 @@
                                                 <td align="center" valign="top" class="card-instance pad" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 0 !important;width: 251px !important;min-width: 251px !important;max-width: 251px !important;"></td>
                                                 % endif
                                                 <td align="center" valign="top" class="card-instance movie" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;overflow: hidden;padding: 3px;width: 502px;min-width: 502px;max-width: 502px;height: 233px;">
-                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + video['art_hash']) if base_url_image else video['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #282828;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                    <table border="0" cellpadding="0" cellspacing="3" width="100%" class="card-background" style="background-image: url(${(base_url_image + video['art_hash']) if base_url_image else video['art_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #1a1a1a;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                         <tr>
                                                             <td class="card-poster-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;width: 152px;min-width: 152px;height: 227px;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + video['thumb_hash']) if base_url_image else video['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #3F4245;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.1);">
+                                                                <table border="0" cellpadding="0" cellspacing="0" class="card-poster" style="background-image: url(${(base_url_image + video['thumb_hash']) if base_url_image else video['thumb_url']});border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background-color: #252525;background-position: center;background-size: cover;background-repeat: no-repeat;background-clip: padding-box;border: 1px solid rgba(255,255,255,.15);">
                                                                     <tr>
                                                                         <td style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${video['rating_key']}" title="${video['title']}" target="_blank" rel="noreferrer" style="text-decoration: underline;">
@@ -785,7 +790,7 @@
                                                             <td class="card-info-container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;padding-left: 4px;text-align: left;height: 227px;">
                                                                 <table border="0" cellpadding="0" cellspacing="0" class="card-info-container-table" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;height: 100%;">
                                                                     <tr>
-                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .1);line-height: 1.2rem;padding: 5px;max-width: 320px;">
+                                                                        <td class="card-info-title nowrap" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 0.9rem;vertical-align: top;white-space: nowrap;text-overflow: ellipsis;overflow: hidden;border-bottom: 1px solid rgba(255, 255, 255, .2);line-height: 1.2rem;padding: 5px;max-width: 320px;">
                                                                             <a href="${parameters['pms_web_url']}#!/server/${parameters['pms_identifier']}/details?key=%2Flibrary%2Fmetadata%2F${video['rating_key']}" title="${video['title']}" target="_blank" rel="noreferrer" style="text-decoration: none;color: #ffffff;">${video['title']}</a>
                                                                         </td>
                                                                     </tr>
@@ -863,7 +868,7 @@
                     % endif
                     <tr>
                         <td class="footer" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;clear: both;margin-top: 10px;text-align: center;width: 100%;">
-                            <div class="footer-bar" style="margin-left: auto;margin-right: auto;width: 200px;border-top: 1px solid #E5A00D;margin-top: 25px;"></div>
+                            <div class="footer-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 30px;"></div>
                             <div class="content-block powered-by" style="padding-bottom: 10px;padding-top: 10px;">
                                 <!-- FOOTER MESSAGE - DO NOT REMOVE -->
                             </div>
