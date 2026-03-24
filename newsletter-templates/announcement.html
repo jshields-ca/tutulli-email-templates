@@ -1,0 +1,495 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width">
+    <meta name="color-scheme" content="light dark">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>scootRflix - Announcement</title>
+    <style>
+    /* -------------------------------------
+        GLOBAL RESETS
+    ------------------------------------- */
+    img {
+        border: none;
+        -ms-interpolation-mode: bicubic;
+        max-width: 100%;
+    }
+
+    body {
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-size: 14px;
+        line-height: 1.4;
+        margin: 0;
+        padding: 0;
+        -ms-text-size-adjust: 100%;
+        -webkit-text-size-adjust: 100%;
+        background-color: #0f0f0f;
+    }
+
+    table {
+        border-collapse: separate;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+        width: 100%;
+    }
+
+    table td {
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        vertical-align: top;
+    }
+
+    /* -------------------------------------
+        BODY & CONTAINER
+    ------------------------------------- */
+    .body {
+        width: 100%;
+    }
+
+    .container {
+        display: block;
+        margin: 0 auto !important;
+        max-width: 1042px;
+        padding: 10px;
+        width: 1042px;
+    }
+
+    .content {
+        box-sizing: border-box;
+        display: block;
+        margin: 0 auto;
+        max-width: 1037px;
+        padding: 10px;
+    }
+
+    /* -------------------------------------
+        MAIN
+    ------------------------------------- */
+    .main {
+        background: #181818;
+        border-radius: 8px;
+        width: 100%;
+        color: #ffffff;
+    }
+
+    .wrapper {
+        box-sizing: border-box;
+        padding: 15px;
+        overflow: auto;
+    }
+
+    /* -------------------------------------
+        TYPOGRAPHY
+    ------------------------------------- */
+    h1, h2, h3, h4 {
+        color: #ffffff;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    p, ul, ol {
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    p li, ul li, ol li {
+        list-style-position: inside;
+        margin-left: 5px;
+    }
+
+    a {
+        color: #00BCD4;
+        text-decoration: underline;
+    }
+
+    /* -------------------------------------
+        HEADER
+    ------------------------------------- */
+    .header {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .server-name {
+        font-size: 28px;
+        text-align: center;
+        font-weight: 300;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        padding: 18px 0 4px 0;
+    }
+
+    .announcement-date {
+        color: #aaaaaa;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 2px;
+        padding-bottom: 10px;
+    }
+
+    /* -------------------------------------
+        DIVIDER
+    ------------------------------------- */
+    .divider {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 1px;
+        background-color: #e8dcc8;
+        border: none;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    /* -------------------------------------
+        ANNOUNCEMENT TITLE
+    ------------------------------------- */
+    .announcement-title {
+        font-size: 26px;
+        font-weight: 300;
+        text-align: center;
+        letter-spacing: 2px;
+        color: #ffffff;
+        padding: 0 0 24px 0;
+    }
+
+    /* -------------------------------------
+        CONTENT SECTIONS
+    ------------------------------------- */
+    .section {
+        padding: 0 0 10px 0;
+    }
+
+    .section-heading {
+        font-size: 13px;
+        font-weight: 700;
+        color: #00BCD4;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(232, 220, 200, 0.3);
+        margin-bottom: 16px;
+    }
+
+    .section-body {
+        font-size: 15px;
+        color: #dddddd;
+        line-height: 1.75;
+    }
+
+    .section-body p {
+        margin-bottom: 12px;
+        color: #dddddd;
+    }
+
+    .section-body ul,
+    .section-body ol {
+        padding-left: 22px;
+        margin-bottom: 12px;
+        color: #dddddd;
+    }
+
+    .section-body li {
+        margin-bottom: 6px;
+        color: #dddddd;
+        list-style-position: outside;
+    }
+
+    /* -------------------------------------
+        OPTIONAL CTA BUTTON
+    ------------------------------------- */
+    .cta-wrapper {
+        text-align: center;
+        padding: 10px 0 24px 0;
+    }
+
+    .cta-button {
+        display: inline-block;
+        background-color: #00BCD4;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        font-size: 13px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        padding: 14px 40px;
+        border-radius: 4px;
+    }
+
+    /* -------------------------------------
+        FOOTER
+    ------------------------------------- */
+    .footer {
+        clear: both;
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .footer-bar {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        height: 1px;
+        background-color: #e8dcc8;
+        border: none;
+        margin-top: 30px;
+        margin-bottom: 28px;
+    }
+
+    .footer-tagline {
+        color: #aaaaaa;
+        font-size: 13px;
+        text-align: center;
+        margin-bottom: 24px;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+
+    .footer-icon-label {
+        color: #888888;
+        font-size: 11px;
+        text-align: center;
+        padding-top: 6px;
+        letter-spacing: 1px;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+
+    .footer-copyright {
+        color: #555555;
+        font-size: 11px;
+        text-align: center;
+        margin-top: 24px;
+        padding-bottom: 24px;
+        letter-spacing: 1px;
+        font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    }
+
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+        color: #fff;
+        font-size: 12px;
+        text-align: center;
+    }
+    </style>
+</head>
+<body style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;-webkit-font-smoothing: antialiased;font-size: 14px;line-height: 1.4;margin: 0;padding: 0;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;background-color: #0f0f0f;">
+
+<table border="0" cellpadding="0" cellspacing="0" class="body" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;">
+    <tr>
+        <td class="container" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;display: block;max-width: 1042px;padding: 10px;width: 1042px;margin: 0 auto !important;">
+            <div class="content" style="box-sizing: border-box;display: block;margin: 0 auto;max-width: 1037px;padding: 10px;">
+
+                <table border="0" cellpadding="3" cellspacing="0" class="main" style="border-collapse: separate;mso-table-lspace: 0pt;mso-table-rspace: 0pt;width: 100%;background: #181818;border-radius: 8px;color: #ffffff;">
+
+                    <!-- ===================== HEADER ===================== -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 15px;overflow: auto;">
+                            <div class="header" style="width: 100%;text-align: center;">
+                                <img src="https://flix.scootr.ca/images/newsletter-header.png" class="header-img" alt="scootRflix" style="border: none;-ms-interpolation-mode: bicubic;max-width: 100%;width: 100%;height: auto;display: block;">
+                            </div>
+                            <div class="server-name" style="font-size: 28px;text-align: center;font-weight: 300;letter-spacing: 4px;text-transform: uppercase;padding: 18px 0 4px 0;">scootRflix</div>
+                            <!-- EDIT: Update the date below -->
+                            <div class="announcement-date" style="color: #aaaaaa;font-size: 16px;text-align: center;letter-spacing: 2px;padding-bottom: 10px;">March 2026</div>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== ANNOUNCEMENT TITLE ===================== -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 0 40px 10px 40px;overflow: auto;">
+                            <hr class="divider" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 10px;margin-bottom: 30px;">
+                            <!-- EDIT: Update the announcement title below -->
+                            <div class="announcement-title" style="font-size: 26px;font-weight: 300;text-align: center;letter-spacing: 2px;color: #ffffff;padding: 0 0 24px 0;">
+                                Server Update &amp; Announcements
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== SECTION 1 ===================== -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 0 50px 10px 50px;overflow: auto;">
+                            <div class="section" style="padding: 0 0 10px 0;">
+                                <!-- EDIT: Section 1 heading -->
+                                <div class="section-heading" style="font-size: 13px;font-weight: 700;color: #00BCD4;letter-spacing: 3px;text-transform: uppercase;padding-bottom: 10px;border-bottom: 1px solid rgba(232, 220, 200, 0.3);margin-bottom: 16px;">
+                                    What's New
+                                </div>
+                                <!-- EDIT: Section 1 body — add paragraphs, lists, or links as needed -->
+                                <div class="section-body" style="font-size: 15px;color: #dddddd;line-height: 1.75;">
+                                    <p style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-weight: 400;margin: 0;margin-bottom: 12px;color: #dddddd;">
+                                        Your announcement content goes here. Write as many paragraphs as you need. You can include <a href="https://app.plex.tv" style="color: #00BCD4;text-decoration: underline;">hyperlinks like this</a> and they will be styled automatically.
+                                    </p>
+                                    <p style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-weight: 400;margin: 0;margin-bottom: 12px;color: #dddddd;">
+                                        Add a second paragraph here with more details about this section.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== SECTION 2 ===================== -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 0 50px 10px 50px;overflow: auto;">
+                            <hr class="divider" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 10px;margin-bottom: 30px;">
+                            <div class="section" style="padding: 0 0 10px 0;">
+                                <!-- EDIT: Section 2 heading -->
+                                <div class="section-heading" style="font-size: 13px;font-weight: 700;color: #00BCD4;letter-spacing: 3px;text-transform: uppercase;padding-bottom: 10px;border-bottom: 1px solid rgba(232, 220, 200, 0.3);margin-bottom: 16px;">
+                                    Coming Soon
+                                </div>
+                                <!-- EDIT: Section 2 body -->
+                                <div class="section-body" style="font-size: 15px;color: #dddddd;line-height: 1.75;">
+                                    <p style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-weight: 400;margin: 0;margin-bottom: 12px;color: #dddddd;">
+                                        Describe upcoming content, features, or changes here. You can also use a list:
+                                    </p>
+                                    <ul style="padding-left: 22px;margin-bottom: 12px;color: #dddddd;">
+                                        <li style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;margin-bottom: 6px;color: #dddddd;list-style-position: outside;">List item one</li>
+                                        <li style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;margin-bottom: 6px;color: #dddddd;list-style-position: outside;">List item two</li>
+                                        <li style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;margin-bottom: 6px;color: #dddddd;list-style-position: outside;">List item three</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== SECTION 3 ===================== -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 0 50px 10px 50px;overflow: auto;">
+                            <hr class="divider" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 10px;margin-bottom: 30px;">
+                            <div class="section" style="padding: 0 0 10px 0;">
+                                <!-- EDIT: Section 3 heading -->
+                                <div class="section-heading" style="font-size: 13px;font-weight: 700;color: #00BCD4;letter-spacing: 3px;text-transform: uppercase;padding-bottom: 10px;border-bottom: 1px solid rgba(232, 220, 200, 0.3);margin-bottom: 16px;">
+                                    Reminders
+                                </div>
+                                <!-- EDIT: Section 3 body -->
+                                <div class="section-body" style="font-size: 15px;color: #dddddd;line-height: 1.75;">
+                                    <p style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-weight: 400;margin: 0;margin-bottom: 12px;color: #dddddd;">
+                                        Add any reminders or general notices here. Want to request new content for the server? Head over to <a href="https://request.scootr.ca" style="color: #00BCD4;text-decoration: underline;">request.scootr.ca</a> and submit a request.
+                                    </p>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== OPTIONAL CTA BUTTON ===================== -->
+                    <!-- Remove this entire <tr> block if no button is needed -->
+                    <tr>
+                        <td class="wrapper" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;vertical-align: top;box-sizing: border-box;padding: 10px 40px 30px 40px;overflow: auto;text-align: center;">
+                            <!-- EDIT: Update button text and href, or remove this <tr> block entirely -->
+                            <a href="https://app.plex.tv" class="cta-button" target="_blank" rel="noreferrer" style="display: inline-block;background-color: #00BCD4;color: #ffffff;text-decoration: none;font-size: 13px;font-weight: 700;letter-spacing: 2px;text-transform: uppercase;padding: 14px 40px;border-radius: 4px;">
+                                Watch on Plex
+                            </a>
+                        </td>
+                    </tr>
+
+                    <!-- ===================== FOOTER ===================== -->
+                    <tr>
+                        <td class="footer" style="font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;vertical-align: top;clear: both;margin-top: 10px;text-align: center;width: 100%;">
+                            <hr class="footer-bar" style="margin-left: auto;margin-right: auto;width: 80%;height: 1px;background-color: #e8dcc8;border: none;margin-top: 30px;margin-bottom: 28px;">
+
+                            <div class="footer-tagline" style="color: #aaaaaa;font-size: 13px;text-align: center;margin-bottom: 28px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                Questions, requests, or just want to chat? We're here.
+                            </div>
+
+                            <!-- Social Icon Buttons -->
+                            <table border="0" cellpadding="0" cellspacing="0" style="margin: 0 auto;border-collapse: separate;">
+                                <tr>
+
+                                    <!-- WhatsApp -->
+                                    <td align="center" valign="top" style="padding: 0 16px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;">
+                                        <a href="https://chat.whatsapp.com/BMnd1hAPnbMCeh3V1AJGvy" target="_blank" rel="noreferrer" style="text-decoration: none;display: inline-block;">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="background-color: #25D366;border-radius: 50%;width: 52px;height: 52px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PHBhdGggZD0iTTE3LjQ3MiAxNC4zODJjLS4yOTctLjE0OS0xLjc1OC0uODY3LTIuMDMtLjk2Ny0uMjczLS4wOTktLjQ3MS0uMTQ4LS42Ny4xNS0uMTk3LjI5Ny0uNzY3Ljk2Ni0uOTQgMS4xNjQtLjE3My4xOTktLjM0Ny4yMjMtLjY0NC4wNzUtLjI5Ny0uMTUtMS4yNTUtLjQ2My0yLjM5LTEuNDc1LS44ODMtLjc4OC0xLjQ4LTEuNzYxLTEuNjUzLTIuMDU5LS4xNzMtLjI5Ny0uMDE4LS40NTguMTMtLjYwNi4xMzQtLjEzMy4yOTgtLjM0Ny40NDYtLjUyLjE0OS0uMTc0LjE5OC0uMjk4LjI5OC0uNDk3LjA5OS0uMTk4LjA1LS4zNzEtLjAyNS0uNTItLjA3NS0uMTQ5LS42NjktMS42MTItLjkxNi0yLjIwNy0uMjQyLS41NzktLjQ4Ny0uNS0uNjY5LS41MS0uMTczLS4wMDgtLjM3MS0uMDEtLjU3LS4wMS0uMTk4IDAtLjUyLjA3NC0uNzkyLjM3Mi0uMjcyLjI5Ny0xLjA0IDEuMDE2LTEuMDQgMi40NzkgMCAxLjQ2MiAxLjA2NSAyLjg3NSAxLjIxMyAzLjA3NC4xNDkuMTk4IDIuMDk2IDMuMiA1LjA3NyA0LjQ4Ny43MDkuMzA2IDEuMjYyLjQ4OSAxLjY5NC42MjUuNzEyLjIyNyAxLjM2LjE5NSAxLjg3MS4xMTguNTcxLS4wODUgMS43NTgtLjcxOSAyLjAwNi0xLjQxMy4yNDgtLjY5NC4yNDgtMS4yODkuMTczLTEuNDEzLS4wNzQtLjEyNC0uMjcyLS4xOTgtLjU3LS4zNDdtLTUuNDIxIDcuNDAzaC0uMDA0YTkuODcgOS44NyAwIDAxLTUuMDMxLTEuMzc4bC0uMzYxLS4yMTQtMy43NDEuOTgyLjk5OC0zLjY0OC0uMjM1LS4zNzRhOS44NiA5Ljg2IDAgMDEtMS41MS01LjI2Yy4wMDEtNS40NSA0LjQzNi05Ljg4NCA5Ljg4OC05Ljg4NCAyLjY0IDAgNS4xMjIgMS4wMyA2Ljk4OCAyLjg5OGE5LjgyNSA5LjgyNSAwIDAxMi44OTMgNi45OTRjLS4wMDMgNS40NS00LjQzNyA5Ljg4NC05Ljg4NSA5Ljg4NG04LjQxMy0xOC4yOTdBMTEuODE1IDExLjgxNSAwIDAwMTIuMDUgMEM1LjQ5NSAwIC4xNiA1LjMzNS4xNTcgMTEuODkyYzAgMi4wOTYuNTQ3IDQuMTQyIDEuNTg4IDUuOTQ1TC4wNTcgMjRsNi4zMDUtMS42NTRhMTEuODgyIDExLjg4MiAwIDAwNS42ODMgMS40NDhoLjAwNWM2LjU1NCAwIDExLjg5LTUuMzM1IDExLjg5My0xMS44OTNhMTEuODIxIDExLjgyMSAwIDAwLTMuNDgtOC40MTN6Ii8+PC9zdmc+" alt="WhatsApp" width="26" height="26" style="display: block;margin: 13px auto;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding-top: 7px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                                        <span style="color: #888888;font-size: 11px;letter-spacing: 1px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">WhatsApp</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+
+                                    <!-- Discord -->
+                                    <td align="center" valign="top" style="padding: 0 16px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;">
+                                        <a href="https://discord.gg/8fKs2rMBdS" target="_blank" rel="noreferrer" style="text-decoration: none;display: inline-block;">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="background-color: #5865F2;border-radius: 50%;width: 52px;height: 52px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PHBhdGggZD0iTTIwLjMxNyA0LjM3YTE5Ljc5MSAxOS43OTEgMCAwMC00Ljg4NS0xLjUxNS4wNzQuMDc0IDAgMDAtLjA3OS4wMzdjLS4yMS4zNzUtLjQ0NC44NjQtLjYwOCAxLjI1YTE4LjI3IDE4LjI3IDAgMDAtNS40ODcgMCAxMi42NCAxMi42NCAwIDAwLS42MTctMS4yNS4wNzcuMDc3IDAgMDAtLjA3OS0uMDM3QTE5LjczNiAxOS43MzYgMCAwMDMuNjc3IDQuMzdhLjA3LjA3IDAgMDAtLjAzMi4wMjdDLjUzMyA5LjA0Ni0uMzIgMTMuNTguMDk5IDE4LjA1N2EuMDgyLjA4MiAwIDAwLjAzMS4wNTcgMTkuOSAxOS45IDAgMDA1Ljk5MyAzLjAzLjA3OC4wNzggMCAwMC4wODQtLjAyOGMuNDYyLS42My44NzQtMS4yOTUgMS4yMjYtMS45OTRhLjA3Ni4wNzYgMCAwMC0uMDQxLS4xMDYgMTMuMTA3IDEzLjEwNyAwIDAxLTEuODcyLS44OTIuMDc3LjA3NyAwIDAxLS4wMDgtLjEyOCAxMC4yIDEwLjIgMCAwMC4zNzItLjI5Mi4wNzQuMDc0IDAgMDEuMDc3LS4wMWMzLjkyOCAxLjc5MyA4LjE4IDEuNzkzIDEyLjA2MiAwYS4wNzQuMDc0IDAgMDEuMDc4LjAxYy4xMi4wOTguMjQ2LjE5OC4zNzMuMjkyYS4wNzcuMDc3IDAgMDEtLjAwNi4xMjcgMTIuMjk5IDEyLjI5OSAwIDAxLTEuODczLjg5Mi4wNzcuMDc3IDAgMDAtLjA0MS4xMDdjLjM2LjY5OC43NzIgMS4zNjIgMS4yMjUgMS45OTNhLjA3Ni4wNzYgMCAwMC4wODQuMDI4IDE5LjgzOSAxOS44MzkgMCAwMDYuMDAyLTMuMDMuMDc3LjA3NyAwIDAwLjAzMi0uMDU0Yy41LTUuMTc3LS44MzgtOS42NzQtMy41NDktMTMuNjZhLjA2MS4wNjEgMCAwMC0uMDMxLS4wM3oiLz48L3N2Zz4=" alt="Discord" width="26" height="26" style="display: block;margin: 13px auto;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding-top: 7px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                                        <span style="color: #888888;font-size: 11px;letter-spacing: 1px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Discord</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+
+                                    <!-- Email -->
+                                    <td align="center" valign="top" style="padding: 0 16px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;">
+                                        <a href="mailto:flix@scootr.ca" style="text-decoration: none;display: inline-block;">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="background-color: #00BCD4;border-radius: 50%;width: 52px;height: 52px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PHBhdGggZD0iTTIwIDRINGMtMS4xIDAtMiAuOS0yIDJ2MTJjMCAxLjEuOSAyIDIgMmgxNmMxLjEgMCAyLS45IDItMlY2YzAtMS4xLS45LTItMi0yem0wIDRsLTggNS04LTVWNmw4IDUgOC01djJ6Ii8+PC9zdmc+" alt="Email" width="26" height="26" style="display: block;margin: 13px auto;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding-top: 7px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                                        <span style="color: #888888;font-size: 11px;letter-spacing: 1px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Email Us</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+
+                                    <!-- Request Content -->
+                                    <td align="center" valign="top" style="padding: 0 16px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 12px;">
+                                        <a href="https://request.scootr.ca" target="_blank" rel="noreferrer" style="text-decoration: none;display: inline-block;">
+                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate;">
+                                                <tr>
+                                                    <td align="center" valign="middle" style="background-color: #E5A00D;border-radius: 50%;width: 52px;height: 52px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;font-size: 14px;">
+                                                        <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiIHdpZHRoPSIyNiIgaGVpZ2h0PSIyNiI+PHBhdGggZD0iTTE4IDN2MmgtMlYzSDh2Mkg2VjNINHYxOGgydi0yaDJ2Mmg4di0yaDJ2MmgyVjNoLTJ6TTggMTdINnYtMmgydjJ6bTAtNEg2di0yaDJ2MnptMC00SDZWN2gydjJ6bTEwIDhoLTJ2LTJoMnYyem0wLTRoLTJ2LTJoMnYyem0wLTRoLTJWN2gydjJ6Ii8+PC9zdmc+" alt="Request Content" width="26" height="26" style="display: block;margin: 13px auto;">
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="center" style="padding-top: 7px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                                        <span style="color: #888888;font-size: 11px;letter-spacing: 1px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">Requests</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </a>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+                            <div class="footer-copyright" style="color: #555555;font-size: 11px;text-align: center;margin-top: 28px;padding-bottom: 24px;letter-spacing: 1px;font-family: 'Open Sans', Helvetica, Arial, sans-serif;">
+                                &copy; 2026 scootRflix &nbsp;&bull;&nbsp; You're receiving this because you're a member of the scootRflix Plex server.
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>
